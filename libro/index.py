@@ -2,7 +2,7 @@ import web
 import requests
 import json
 
-render= web.template.render("mvc/")
+render= web.template.render("libro/")
 
 class Index():
   def GET(self):
@@ -44,7 +44,8 @@ class Index():
       "autorlibro":"Autor libro: "+autorlibro,
       "contenido":"Contenido: "+contenido,
       "publicacion":"Fecha de publicacion: "+publicacion
-      "ur"
+      "url":"Imagen: "+url
+      "cover":"cover: "+cover
       "url":"¿Quieres adquirir el libro? Da clic en el link: "+link
 
     }
