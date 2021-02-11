@@ -9,37 +9,36 @@ $def with(datos)
 
 </head>
 
-<body style="background-color:#ECE2C6;">
-  
-	<form method="POST">
-    <body style="background-color:#A18262;">
-		<div align="center">
+  <body style="background-color:#ECE2C6;">
+    
+    <form method="POST">
+      <div align="center">
 
-      <h1>OPEN LIBRA</h1>
+        <h1>OPEN LIBRA</h1>
 
-		<h3>Busca libros</h3>
-		<label>Escribe el nombre de tu libro</label>
-    <br>
-    <input type="text" name="bookname" class="form-control">
-    <br>
-    <button type="button" class="btn btn-warning">Buscar</button>
-		</div>
+        <h3>Busca libros</h3>
+        <label>Escribe el nombre de tu libro</label>
+        <br>
+        <input type="text" name="bookname" class="form-control">
+        <br>
+        <button type="submit" class="btn btn-warning">Buscar</button>
+      </div>
     </form>
+        
+        
     <div align="center">
-    $if datos !=None:
-    $:datos["bookname"]<br>
-    $:datos["titulo"]<br>
-    $:datos["autorlibro"]<br>
-    $:datos["contenido"]<br>
-    $:datos["publicacion"]<br>
-    $:datos["url"]<br>
-    $:datos["cover"]<br>
-
-
-    
+      $if datos !=None:
+      $:datos["bookname"]<br>
+      $:datos["titulo"]<br>
+      $:datos["autorlibro"]<br>
+      $:datos["contenido"]<br>
+      $:datos["publicacion"]<br>
+      $:datos["url"]<br>
+      $:datos["cover"]<br>
+      $:datos["imagen"]<br>
     </div>
-    
-    
-    
+      
+      
+      
   </body>
 </html>

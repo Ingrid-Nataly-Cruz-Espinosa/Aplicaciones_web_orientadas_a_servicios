@@ -12,30 +12,32 @@ class Index():
   def POST(self)  :
     form=web.input()
     bookname=form.bookname
-    
-    resultado = requests.get("https://www.etnassoft.com/api/v1/get/?id=589&callback=?q"+bookname)
+    resultado = requests.get("https://www.etnassoft.com/api/v1/get/?"+bookname)
 
     libros = resultado.json()
 
-    items = libros["items"]
+    items = libros
 
     encoded = json.dumps(items)
     decoded = json.loads(encoded)
 
-    titulos=str(decoded[0]["title"])
-    autorlibros=str(decoded[0]["author"])
-    contenidos=str(decoded[0]["content"])
-    publicaciones=str(decoded[0]["publisher"])
-    urls=str(decoded[0]["url_download"])
-    covers=str(decoded[0]["cover"])
+    titulo_1=str(decoded[0]["title"])
+    autorlibro_1=str(decoded[0]["author"])
+    contenido_1=str(decoded[0]["content"])
+    publicacion_1=str(decoded[0]["publisher"])
+    url_1=str(decoded[0]["url_download"])
+    cover_1=str(decoded[0]["cover"])
+    imagen_1=str(decoded[0]["thumbnail"])
     
+      
 
-    titulo="<label>'"+titulos+"'</label>"
-    autorlibro="<label>'"+autorlibros+"'</label>"
-    contenido="<label>'"+contenidos+"'</label>"
-    publicacion="<label>'"+publicaciones+"'</label>"
-    url="<label>'"+urls+"'</label>"
-    cover="<label>'"+covers+"'</label>"
+    titulo="<label>'"+titulo_1+"'</label>"
+    autorlibro="<label>'"+autorlibro_1+"'</label>"
+    contenido="<label>'"+contenido_1+"'</label>"
+    publicacion="<label>'"+publicacion_1+"'</label>"
+    url="<label>'"+url_1+"'</label>"
+    cover="<label>'"+cover_1+"'</label>"
+    imagen="<img src='"+imagen_1+"'/>"
 
     datos={
       
@@ -43,10 +45,9 @@ class Index():
       "titulo":titulo,
       "autorlibro":"Autor libro: "+autorlibro,
       "contenido":"Contenido: "+contenido,
-      "publicacion":"Fecha de publicacion: "+publicacion
-      "url":"Imagen: "+url
-      "cover":"cover: "+cover
-      "url":"¿Quieres adquirir el libro? Da clic en el link: "+link
-
+      "publicacion":"Fecha de publicacion: "+publicacion,
+      "url":"¿Quieres adquirir el libro? Da clic en el link: "+url,
+      "cover":"cover: "+cover,
+      "imagen":imagen
     }
     return render.index(datos)
