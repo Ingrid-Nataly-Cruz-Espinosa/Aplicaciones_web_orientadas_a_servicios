@@ -1,35 +1,45 @@
 import web
 import json
 urls = (
-    '/edad?', 'Edad'
+    '/read?', 'Read'
 )
-app = web.application(urls, globals())
-class Edad():
-    def _init_(self): 
-        pass
-    def GET(self):  
+edadapi = web.application(urls, globals())
+
+class EDAD:
+
+
+    def _init_(self):
+      pass
+        
+     
+    def GET(self):
         try:
-            parameter = web.input() 
-            name = parameter.name
-            day = int(parameter.day)
-            month = parameter.month
-            year = int(parameter.year)
-            age = 2021 - year
-            dato={}
-            dato["name"] = name
-            dato["day"] = day
-            dato["month"] = month
-            dato["year"] = year
-            dato["age"] = age
-            archivo = open("static/recaudacion.txt","a")
-            archivo.write(str(dato))
-            archivo.close()
-            return json.dumps(dato)
+            edades = web.input() 
+            nombre = edades.nombre
+            dia = int(edades.dia)
+            mes = edades.mes
+            año = int(edades.año)
+            edad = 2021 - año
+            datos={}
+            datos["Tu nombre es"] = nombre
+            datos["dia d¡nacimiento"] = dia
+            datos["Mes de nacimiento"] = mes
+            datos["Año de nacimiento"] = año
+            datos["Tu edad es"] = edad
+            texto = open("static/recaudacion.txt","a")
+            texto.write("\n")
+            texto.write(str(datos))
+            texto.close()
+            return json.dumps(datos)
+
         except:
-            data ={}
-            data["error"] = "error 404 la url no existe"
-            return data
-if _name_ =="_main_": #
-    app.run
+          datos = {}
+          datos["ALERTA"] = "Algo esta mal en tus datos"
+          return json.dumps(datos)
+       
+            
+
+if _name_ == "_main_":
+  edadapi.run()
 
 
