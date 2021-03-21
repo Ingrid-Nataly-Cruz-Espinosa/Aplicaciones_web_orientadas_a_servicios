@@ -70,7 +70,7 @@ class Index(object):
                 elif i[2] > 0.85:
                     titulo = "Te pico una chinche"
                     resultado = "No tienes de que preocuparte no es nada grave. ¡OJO SI ERES ALERGICO ACUDE RAPIDDO A UN MEDICO!"
-                    descripcion = "Si crees que te ha picado una chinche, lava la picadura con agua y jabón y ponte loción de calamina para aliviar el picor. Un adulto puede conseguir una crema para aliviar la picazón en una farmacia o droguería. Intenta rascar la picadura lo menos posible porque se te podría infectar.
+                    descripcion = "Si crees que te ha picado una chinche, lava la picadura con agua y jabón y ponte loción de calamina para aliviar el picor. Un adulto puede conseguir una crema para aliviar la picazón en una farmacia o droguería. Intenta rascar la picadura lo menos posible porque se te podría infectar."
 "
                     status = 200
 
