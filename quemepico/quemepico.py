@@ -75,31 +75,25 @@ class Index(object):
                     status = 200
 
                 elif i[3] > 0.85:
-                    titulo = "lateral"
-                    resultado = "La imagen es una señal de incorporación de transito."
-                    descripcion = "Este tipo de señalamiento avisa sobre la incorporación de transito que va en la misma."
-                    status = 200
-
-                elif i[4] > 0.85:
                     titulo = "Te pico una garrapata"
                     resultado = "Si te pico una garrapata tienes que tener cuidado, porque pueden trasmitirte enfermedades graves"
                     descripcion = "Utiliza pinzas pequeñas o de punta fina para agarrar la garrapata lo más cerca posible de la piel. Saca suavemente la garrapata con un movimiento ascendente lento y constante. No la retuerzas ni la aprietes. No agarres la garrapata con las manos desprotegidas. Los expertos no recomiendan usar vaselina, esmalte de uñas ni cerillas (fósforos) calientes para quitar garrapatas.
 "
                     status = 200
 
-                elif i[5] > 0.85:
+                elif i[4] > 0.85:
                     titulo = "Te pico una Hormiga"
                     resultado = "No tienes de que preocuparte no es grave solo tendras un leve hinchazón ¡OJO SI ERES ALERGICO ACUDE RAPIDO A UN MEDICO!"
                     descripcion = "Si alguna vez crees que te ha picado una hormiga.  El veneno de las picaduras de hormigas coloradas puede producir una ligera hinchazón en la zona de la picadura, y puede que el médico quiera echarle un vistazo para asegurarse de que no tienes una reacción alérgica."
                     status = 200
 
-                elif i[6] > 0.85:
+                elif i[5] > 0.85:
                     titulo = "Te pico una Pulga"
                     resultado = "No tienes de que preocuparte no es grave solo tendras un leve hinchazón ¡OJO SI ERES ALERGICO ACUDE RAPIDO A UN MEDICO!"
                     descripcion = "Si crees que te ha picado una pulga, lava la picadura con agua y jabón. Aplica loción de calamina para aliviar la picazón, o un adulto puede conseguirse en la farmacia una crema que alivie la picazón. Trata de no rascarte demasiado porque las picaduras podrían infectarse."
                     status = 200
 
-                elif i[7] > 0.85:
+                elif i[6] > 0.85:
                     titulo = "Te pico una Araña"
                     resultado = "Puedes presentar dolor muy severo ¡OJO SI ERES ALERGICO ACUDE RAPIDO A UN MEDICO!"
                     descripcion = "Lave el área afectada con agua y jabón. Aplique hielo o una compresa húmeda. Si necesita, tome un medicamento para el dolor de venta libre. Considere tomar remedios para la alergia en caso de hinchazón severa. Busque tratamiento médico para niños y adultos con síntomas graves. Lave el área afectada con agua y jabón  Aplique hielo o una compresa húmeda.Si necesita, tome un medicamento para el dolor de venta libre. Considere tomar remedios para la alergia en caso de hinchazón severa Busque tratamiento médico para niños y adultos con síntomas graves"
